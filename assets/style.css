@@ -1,0 +1,359 @@
+/* ----------------------------------------- TABLE -----------------------------------------*/
+/* 
+1. RESET CSS
+2. NAV
+3. BANNER
+4. MAIN
+5. 
+*/
+
+
+/* ----------------------------------------- 1. RESET CSS --------------------------------------*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.container{
+    width: 800px;
+    margin: auto;
+    padding: 0 16px;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.p-input{
+    padding: 8px;
+}
+.w-30{
+    width: 30px;
+}
+.mr-8{
+    margin-right: 8px;
+}
+/* ----------------------------------------- 2. NAV ---------------------------------------*/
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+ul li a{
+    display: block;
+    padding: 12px 24px;
+    color: #ffffff;
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.menu {
+    display: flex;
+    align-items: center;
+}
+.menu .menu__dropdown {
+    position: relative;  
+}
+.menu li a:hover{
+    color: #000000;
+    background: #939393;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+.menu .menu__dropdown .menu__dropdown-list {
+    min-width: 100%; /* Set width of the dropdown */
+    background: #ffffff;
+    visibility: hidden; 
+    opacity: 0;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+    position: absolute;
+    transform: translateY(-3em);
+    z-index: -1;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+.menu .menu__dropdown .menu__dropdown-list a{
+    color: #000000;
+}
+.menu .menu__dropdown .menu__dropdown-list a:hover{
+    color: #ffffff;
+}
+.menu .menu__dropdown:hover .menu__dropdown-list{
+    visibility: visible; /* shows sub-menu */
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0%);
+    transition-delay: 0s, 0s, 0.3s;   
+}
+.search{
+    padding: 12px 24px;
+    transition: 0.3s;
+}
+.search .search__icon{
+    color: #ffffff;
+}
+.search:hover{
+    background: #f44336;
+    cursor: pointer;
+}
+
+/* ----------------------------------------- 3. BANNER ---------------------------------------*/
+
+.banner{
+    background-image: url(./imgs/1.jpg  );
+    width: 100%;
+    height: 954px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    text-align: center;
+    margin-top: 43px;
+}
+.banner .banner__text{
+    padding: 16px 0 32px;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* ----------------------------------------- 4. BAND ---------------------------------------*/
+/* .main {
+    display: flex;
+    justify-content: center;
+} */
+.band{
+    padding: 64px 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.band p{
+    text-align: justify;
+}
+.band .band__title{
+    text-align: center;
+    padding-bottom: 16px;
+}
+.band .band__title h2{
+    padding: 10px 0 25px;
+}
+.band .band__title span{
+    opacity: 0.6;
+    font-style: italic;
+}
+.band .band__card{
+    display: flex;
+    padding: 32px 0;
+}
+.band .band__card .band__card-one{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.band .band__card .band__card-one .one__title{
+    margin: 15px 0;
+}
+.band .band__card .band__card-one .one__img{
+    width: 70%;
+}
+.band .band__card .band__card-one .one__img img{
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+/* ----------------------------------------- 5. TOUR ---------------------------------------*/
+/* <!-- Table ticket --> */
+.tourdates{
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 64px 0;
+}
+.tour__title{
+    text-align: center;
+}
+.tour__title h2{
+    text-transform: uppercase;
+    margin: 10px 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 45px;
+}
+.tour__title p {
+    margin: 15px 0 32px;
+    opacity: 0.6;
+    font-style: italic;
+}
+.tour__times{
+    background-color: #fff;
+    color: #000000;
+}
+.tour__times .tour__times-row{
+    display: flex;
+}
+.tour__times .tour__times-one{
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+.tour__times .tour__times-one h4{
+    width: 20%;
+    max-width: 150px;
+    overflow: hidden;
+}
+.tour__times .tour__times-one span{
+    background-color: #f44336;
+    color: #fff;
+    padding: 2px 8px;
+}
+.tour__times .three{
+    justify-content: space-between;
+}
+.tour__times .three span{
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+}
+/* <!-- Buy ticket --> */
+.tour__tickets{
+    display: flex;
+    margin: 32px -8px 0;
+    padding-bottom: 48px;
+}
+.tour__tickets .tour__tickets-item{
+    padding: 0 8px;
+    width: 33.33333%;
+}
+.tour__tickets .tour__tickets-item .item__img{
+    display: block;
+    max-height: 150px;    
+}
+.tour__tickets .tour__tickets-item .item__img:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.tour__tickets .tour__tickets-item .item__content{
+    background-color: #fff;
+    color: #000000;
+    padding: 16px;
+}
+.tour__tickets .tour__tickets-item .item__content .item__content-title{
+    font-size: 15px;
+}
+.tour__tickets .tour__tickets-item .item__content .item__content-time{
+    margin-top: 15px;
+}
+.tour__tickets .tour__tickets-item .item__content .item__content-desc{
+    margin-top: 15px;
+}
+.tour__tickets .tour__tickets-item .item__content .item__content-btn{
+    background-color: #000;
+    color: #fff;
+    margin-top: 15px;
+    padding: 10px 16px;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}.tour__tickets .tour__tickets-item .item__content .item__content-btn:hover{
+    color: #000000;
+    background: #939393;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+/* ----------------------------------------- 6. CONTACT ---------------------------------------*/
+.contact{
+    display: flex;
+    justify-content: center;
+    padding: 64px 0 96px;
+}
+.contact .contact__title{
+    text-align: center;
+}
+.contact .contact__title h2{
+    margin: 10px 0;
+}
+.contact .contact__title p{
+    margin: 15px 0;
+    font-style: italic;
+    opacity: 0.6;
+}
+.contact .contact__content{
+    display: flex;
+    padding: 32px 0 0;
+}
+.contact .contact__content .contact__content-add{
+    width: 49.99%;
+}
+/* .contact .contact__content .contact__content-add .add__info{}
+.contact .contact__content .contact__content-add .add__phone{}
+.contact .contact__content .contact__content-add .add__email{} */
+.contact .contact__content .contact__content-des{
+    width: 49.99%;
+}
+.contact .contact__content .contact__content-des .des__name{
+    margin: 0 0 8px 0;
+}
+.contact .contact__content .contact__content-des .des__name .des__name-n{
+    width: 48.5%;
+}
+
+/* .contact .contact__content .contact__content-des .des__mes{} */
+.contact .contact__content .contact__content-des .des__mes input{
+    width: 100%;
+}
+.contact .contact__sub{
+    text-align: end;
+    margin: 16px 0;
+}
+.contact .contact__sub input{
+    padding: 8px 16px;
+    color: #fff;
+    background: #000000;
+    border: none;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+.contact .contact__sub input:hover{
+    color: #000;
+    background: #ccc;
+    cursor: pointer;
+}
+
+/* ----------------------------------------- 7. FOOTER ---------------------------------------*/
+footer{
+    text-align: center;
+    padding: 70px 16px 53px;
+    opacity: 0.6;
+    font-size: 24px;
+    background-color: #f1f1f1;
+}
+.footer__icon a {
+    color: #000;
+}
+.footer__icon a:hover{
+    opacity: 0.6;
+}
+footer p{
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+footer p a{
+    color: #000;
+}
